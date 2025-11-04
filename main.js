@@ -1,13 +1,8 @@
-// Target date
 const targetDate = new Date("Nov 12, 2025 10:00:00").getTime();
-
-// Function to convert English digits to Bengali digits
 function toBanglaNumber(num) {
   const engToBan = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
   return num.toString().split('').map(d => engToBan[d] || d).join('');
 }
-
-// Update countdown
 function updateCountdown() {
   const now = new Date().getTime();
   const distance = targetDate - now;
@@ -72,7 +67,6 @@ function drawSparkles() {
 
 drawSparkles();
 
-// Adjust when window resized
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
